@@ -28,7 +28,10 @@
                             each message in dateGroup.messages
                                 !=message
 
-            div.new-message  New
+            div.new-message
+                button.new-message__add
+                div.new-message__text
+                    input(type='text' name='new_message' placeholder='Сообщение' class="input new-message__input") 
 
 
 

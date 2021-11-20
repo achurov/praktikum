@@ -153,6 +153,6 @@ export default () => {
             })
         }
     }
-    console.log(data)
+    
     return tmpl(data);
 }
