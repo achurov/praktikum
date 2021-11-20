@@ -1,6 +1,6 @@
 import './chat.scss';
 import tmpl from './chat.pug';
-import chatCard from '../../components/chatCard/chatCard'
+import chatCard from '../../modules/chatCard/chatCard'
 import messageCard from '../../modules/message/message'
 
 const data = {
@@ -8,7 +8,8 @@ const data = {
         {
             title: 'Карина Терехова',
             text: 'Позвонил на основной номер потом что-то произошло',
-            time: '10:30'
+            time: '10:30',
+            active: true
         },
         {
             title: 'Илья Баков',
@@ -153,6 +154,6 @@ export default () => {
             })
         }
     }
-    
+
     return tmpl(data);
 }
