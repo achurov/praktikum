@@ -1,0 +1,143 @@
+#main {
+    background: #F7F9FA;
+    display: flex;
+}
+
+.sidebar {
+    background: #fff;
+
+    width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 0px 15px rgba(207, 219, 224, 0.2);
+    z-index: 1000;
+}
+
+.sidebar__content {
+    overflow-y: scroll;
+}
+
+.sidebar-header {
+    height: 60px;
+    background: #fff;
+    border-bottom: solid 1px #E8E8E8;
+    padding: 12px;
+    display: flex;
+
+
+    &__search {
+        margin-left: 12px;
+        height: 36px;
+        flex-grow: 1;
+        font-size: 12px;
+    }
+}
+
+.sidebar-header__btn {
+    background: #F4F4F5;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    flex-shrink: 0;
+}
+
+.chatlist {
+    padding: 0;
+    margin: 0;
+}
+
+
+.chat {
+    background: #F7F9FA;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.chat-header {
+    height: 60px;
+    background: #fff;
+    border-bottom: solid 1px #E8E8E8;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // &__info{
+    // }
+
+}
+
+.person {
+    display: flex;
+    // background: tomato;
+    align-items: center;
+
+    &__avatar {
+        background: greenyellow;
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        margin-right: 12px;
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+}
+
+.chat-utils {
+
+
+    &__btn {
+        margin-left: 8px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+    }
+}
+
+
+.content {
+    padding: 12px;
+    overflow-y: scroll;
+
+
+}
+
+.date-group {
+
+
+
+    &__date {
+        margin: 24px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content {
+        margin-top: 12px;
+    }
+}
+
+.chat-date {
+    font-size: 12px;
+    background: #fff;
+    padding: 4px 12px;
+    border: 1px solid #E8E8E8;
+    border-radius: 1em;
+    color: #999;
+}
+
+
+
+.new-message {
+    height: 50px;
+    background: bisque;
+}

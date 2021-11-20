@@ -1,4 +1,4 @@
-import './form.css';
+import './form.scss';
 import tmpl from './form.pug';
 import input from '../../components/input/input'
 import button from '../../components/button/button'

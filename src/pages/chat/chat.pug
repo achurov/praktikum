@@ -1,0 +1,35 @@
+#main
+    div.sidebar
+        div.sidebar-header
+            button.sidebar-header__btn
+            input(type='text' name='search' placeholder='Поиск' class="input sidebar-header__search") 
+
+        div.sidebar__content
+            ul.chatlist
+                each chatCard in chatList
+                    !=chatCard
+
+    div.chat
+        if chat
+            div.chat-header
+                div.person  
+                    div.person__avatar
+                    div.person__name #{chat.person.name}      
+                div.chat-utils
+                    button.chat-utils__btn
+                    button.chat-utils__btn
+
+            div.content
+                each dateGroup in chat.messages
+                    div.date-group
+                        div.date-group__date 
+                            div.chat-date #{dateGroup.date}
+                        div.date-group__content                
+                            each message in dateGroup.messages
+                                !=message
+
+            div.new-message  New
+
+
+
+

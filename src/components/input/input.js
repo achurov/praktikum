@@ -1,4 +1,4 @@
-import './input.css';
+import './input.scss';
 import tmpl from './input.pug';
 
 

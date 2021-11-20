@@ -1,4 +1,4 @@
-import './link.css';
+import './link.scss';
 import tmpl from './link.pug';
 
 

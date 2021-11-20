@@ -1,4 +1,4 @@
-import './button.css';
+import './button.scss';
 import tmpl from './button.pug';
 
 
