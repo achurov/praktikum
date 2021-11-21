@@ -1,7 +1,7 @@
 #main
     div.sidebar
         div.sidebar-header
-            button.sidebar-header__btn
+            a(href="/setting").sidebar-header__btn
             input(type='text' name='search' placeholder='Поиск' class="input sidebar-header__search") 
 
         div.sidebar__content
@@ -11,7 +11,7 @@
 
     div.chat
         if chat
-            div.chat-header
+            div.header
                 div.person  
                     div.person__avatar
                     div.person__name #{chat.person.name}      

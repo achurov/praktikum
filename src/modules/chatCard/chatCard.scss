@@ -51,7 +51,7 @@
 
 
     &:hover {
-        background: #4254FF;
+        background: #F4F4F5;
     }
 
 
@@ -59,17 +59,17 @@
         background: #4254FF;
     }
 
-    &:hover &__name,
+
     &_active &__name {
         color: #fff;
     }
 
-    &:hover &__text,
+
     &_active &__text {
         color: rgba(255, 255, 255, 0.7);
     }
 
-    &:hover &__time,
+
     &_active &__time {
         color: rgba(255, 255, 255, 0.7);
     }

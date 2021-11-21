@@ -1,0 +1,41 @@
+.setting {
+    margin: 24px auto;
+    width: 600px;
+
+}
+
+.setting-group {
+    background: #fff;
+    margin-top: 24px;
+    border-radius: 10px;
+}
+
+.setting__line {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+
+}
+
+.setting__line:not(:first-child) {
+    border-top: solid 1px #E8E8E8;
+}
+
+
+
+.setting__value {
+    color: #999;
+}
+
+.setting__container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.setting__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: grey;
+}

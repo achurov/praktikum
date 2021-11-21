@@ -1,8 +1,10 @@
-.link{
+.link,
+.link:visited {
     text-decoration: none;
     color: #4254FF;
 }
- 
-.link:visited{
-    color: #4254FF;
+
+.link_abort,
+.link_abort:visited {
+    color: #EE5454;
 }
