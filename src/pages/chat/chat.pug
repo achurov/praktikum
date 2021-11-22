@@ -1,38 +1,20 @@
 #main
     div.sidebar
-        div.sidebar-header
-            a(href="/setting").sidebar-header__btn
-            input(type='text' name='search' placeholder='Поиск' class="input sidebar-header__search") 
+        div.sidebar__header
 
-        div.sidebar__content
-            ul.chatlist
-                each chatCard in chatList
-                    !=chatCard
+        ul.chatlist
+            each chatCard in chatList
+                #{chatCard.title}  
+                hr
+
 
     div.chat
-        if chat
-            div.header
-                div.person  
-                    div.person__avatar
-                    div.person__name #{chat.person.name}      
-                div.chat-utils
-                    button.chat-utils__btn
-                    button.chat-utils__btn
+        div.header
+            div.header__title 
+                !=header
+    
 
-            div.content
-                each dateGroup in chat.messages
-                    div.date-group
-                        div.date-group__date 
-                            div.chat-date #{dateGroup.date}
-                        div.date-group__content                
-                            each message in dateGroup.messages
-                                !=message
-
-            div.new-message
-                button.new-message__add
-                div.new-message__text
-                    input(type='text' name='new_message' placeholder='Сообщение' class="input new-message__input") 
-
-
-
-
+        each dateGroup in chat.messages
+            each message in dateGroup.messages
+                #{message.text}
+                hr

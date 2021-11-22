@@ -12,42 +12,18 @@
     flex-direction: column;
     box-shadow: 10px 0px 15px rgba(207, 219, 224, 0.2);
     z-index: 1000;
-}
-
-.sidebar__content {
-    overflow-y: scroll;
-}
-
-.sidebar-header {
-    height: 60px;
-    background: #fff;
-    border-bottom: solid 1px #E8E8E8;
-    padding: 12px;
-    display: flex;
 
 
-    &__search {
-        margin-left: 12px;
-        height: 36px;
-        flex-grow: 1;
-        font-size: 12px;
+    &__header {
+        height: 60px;
+        background: #fff;
+        border-bottom: solid 1px #E8E8E8;
+        padding: 12px;
+        display: flex;
+
+
     }
 }
-
-.sidebar-header__btn {
-    background: #F4F4F5;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: none;
-    flex-shrink: 0;
-}
-
-.chatlist {
-    padding: 0;
-    margin: 0;
-}
-
 
 .chat {
     background: #F7F9FA;
@@ -63,114 +39,19 @@
     background: #fff;
     border-bottom: solid 1px #E8E8E8;
     padding: 12px 24px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // grid-gap: 0;
-    // &__info{
-    // }
 
-    &__title{
+
+    &__title {
+        grid-column-start: 1;
+        grid-column-end: 3;
         display: flex;
+        background: tomato;
         align-items: center;
-        justify-content: center;
+
+
     }
 
-}
-
-.person {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    display: flex;
-    // background: tomato;
-    align-items: center;
-
-    &__avatar {
-        background: greenyellow;
-        width: 36px;
-        height: 36px;
-        flex-shrink: 0;
-        border-radius: 50%;
-        margin-right: 12px;
-    }
-
-    &__name {
-        font-weight: 600;
-    }
-}
-
-.chat-utils {
-    display: flex;
-    flex-direction: row-reverse;
-
-    &__btn {
-        margin-left: 8px;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        border: none;
-        
-    }
-}
-
-.header__title{
-
-}
-
-.content {
-    padding: 12px;
-    overflow-y: scroll;
-
-
-}
-
-.date-group {
-
-
-
-    &__date {
-        margin: 24px 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    &__content {
-        margin-top: 12px;
-    }
-}
-
-.chat-date {
-    font-size: 12px;
-    background: #fff;
-    padding: 4px 12px;
-    border: 1px solid #E8E8E8;
-    border-radius: 1em;
-    color: #999;
-}
-
-.new-message {
-    padding: 12px 24px;
-    min-height: 60px;
-    background: #fff;
-    display: flex;
-
-    &__add {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        border: none;
-        cursor: pointer;
-    }
-
-    &__text {
-        margin-left: 12px;
-        width: 100%;
-    }
-
-    &__input {
-        height: 100%;
-        width: 100%;
-    }
 }

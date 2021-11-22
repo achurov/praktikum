@@ -1,57 +1,63 @@
 import tmpl from './signup.pug';
-import form from '../../components/form/form'
+import form from '../../modules/form/form'
 
 const data = {
     form: form({
-        action: '/',
+        action: '/chat',
         title: 'Регистрация',
-        inputs: [
+        elements: [
             {
-                type: 'text',
+                elementType: 'input',
                 name: 'first_name',
                 placeholder: 'Имя'
             },
             {
-                type: 'text',
+                elementType: 'input',
                 name: 'second_name',
                 placeholder: 'Фамилия'
             },
             {
-                type: 'text',
+                elementType: 'input',
                 name: 'login',
                 placeholder: 'Логин'
             },
             {
+                elementType: 'input',
                 type: 'email',
                 name: 'email',
                 placeholder: 'Почта'
             },
             {
-                type: 'text',
+                elementType: 'input',
                 name: 'phone',
                 placeholder: 'Телефон'
             },
             {
-                type: 'password',
+                elementType: 'input',
                 name: 'password',
                 placeholder: 'Пароль'
             },
             {
+                elementType: 'input',
                 type: 'password',
                 name: 're_password',
                 placeholder: 'Пароль еще раз'
             },
-        ],
-        buttons: [
             {
+                elementType: 'button',
                 text: 'Зарегистрироваться'
-            }
-        ],
-        bottomText: 'Уже есть аккаунт?',
-        bottomLink: {
-            href: '/signin',
-            text: 'Войти'
-        }
+            },
+            {
+                elementType: 'text',
+                text: 'Уже есть аккаунт?',
+            },
+            {
+                elementType: 'link',
+                href: '/signin',
+                text: 'Войти'
+            },
+
+        ]
     })
 }
 

@@ -1,9 +1,11 @@
 import './chat.scss';
 import tmpl from './chat.pug';
-import chatCard from '../../modules/chatCard/chatCard'
-import messageCard from '../../modules/message/message'
+import avatar from '../../components/avatar/avatar';
+// import chatCard from '../../modules/chatCard/chatCard'
+// import messageCard from '../../modules/message/message'
 
 const data = {
+    header: avatar({size:'s'}),
     chatList: [
         {
             title: 'Карина Терехова',
@@ -142,18 +144,18 @@ const data = {
 }
 
 export default () => {
-    if (Array.isArray(data.chatList)) {
-        data.chatList = data.chatList.map(item => chatCard(item))
-    }
+    // if (Array.isArray(data.chatList)) {
+    //     data.chatList = data.chatList.map(item => chatCard(item))
+    // }
 
-    if (data.chat) {
-        if (Array.isArray(data.chat.messages)) {
-            data.chat.messages = data.chat.messages.map(dateGroup => {
-                dateGroup.messages = dateGroup.messages.map(message => messageCard(message))
-                return dateGroup
-            })
-        }
-    }
-
+    // if (data.chat) {
+    //     if (Array.isArray(data.chat.messages)) {
+    //         data.chat.messages = data.chat.messages.map(dateGroup => {
+    //             dateGroup.messages = dateGroup.messages.map(message => messageCard(message))
+    //             return dateGroup
+    //         })
+    //     }
+    // }
+console.log(data)
     return tmpl(data);
 }

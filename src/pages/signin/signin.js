@@ -1,32 +1,37 @@
 import tmpl from './signin.pug';
-import form from '../../components/form/form'
+import form from '../../modules/form/form'
 
 const data = {
     form: form({
-        action: '/',
+        action: '/chat',
         title: 'Вход',
-        inputs: [
+        elements: [
             {
-                type: 'text',
+                elementType: 'input',
                 name: 'login',
                 placeholder: 'Логин'
             },
             {
+                elementType: 'input',
                 type: 'password',
                 name: 'password',
                 placeholder: 'Пароль'
-            }
-        ],
-        buttons: [
+            },
             {
+                elementType: 'button',
                 text: 'Войти'
-            }
-        ],
-        bottomText: 'Нет аккаунта?',
-        bottomLink: {
-            href: 'signup',
-            text: 'Регистрация'
-        }
+            },
+            {
+                elementType: 'text',
+                text: 'Нет аккаунта?',
+            },
+            {
+                elementType: 'link',
+                href: '/signup',
+                text: 'Регистрация'
+            },
+            
+        ]
     })
 }
 
