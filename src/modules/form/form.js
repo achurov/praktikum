@@ -18,6 +18,7 @@ export default (data) => {
                     return input(item)
 
                 case 'button':
+                    item.className = 'form__btn'
                     return button(item)
 
                 case 'link':
@@ -33,6 +34,6 @@ export default (data) => {
         })
     }
 
-   
+
     return tmpl(data);
 }
