@@ -1,0 +1,24 @@
+div.chat
+    div.header
+        div.header__title
+            !=person
+
+    div.chat__content
+        each dateGroup in messages
+            div.date-group
+                div.date-group__date 
+                    div.chat-date #{dateGroup.date}
+                    
+                div.date-group__content                
+                    each message in dateGroup.messages
+                        !=message
+
+    div.new-message
+        button.new-message__add
+        div.new-message__text
+            input(type='text' name='new_message' placeholder='Сообщение' class='new-message__input') 
+        button.new-message__send
+
+
+
+
