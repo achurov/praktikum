@@ -1,5 +1,3 @@
-
-
 import input from './components/input/input'
 import button from './components/button/button'
 import link from '../../components/link/link'

@@ -1,20 +1,3 @@
 #main
-    div.sidebar
-        div.sidebar__header
-
-        ul.chatlist
-            each chatCard in chatList
-                #{chatCard.title}  
-                hr
-
-
-    div.chat
-        div.header
-            div.header__title 
-                !=header
-    
-
-        each dateGroup in chat.messages
-            each message in dateGroup.messages
-                #{message.text}
-                hr
+    !=sidebar
+    !=chat

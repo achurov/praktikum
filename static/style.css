@@ -10,3 +10,8 @@ body {
     color: #272C32;
     margin: 0;
 }
+
+#main {
+    background: #F7F9FA;
+    display: flex;
+}
