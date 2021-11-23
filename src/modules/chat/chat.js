@@ -17,13 +17,13 @@ export default (data) => {
     }
 
     data.headerButtons = [
-        button({ title: 'search in chat', className: 'utils__item' }),
-        button({ title: 'more', className: 'utils__item' }),
+        button({ title: 'search in chat', className: 'utils__item', icon: 'search' }),
+        button({ title: 'more', className: 'utils__item', icon: 'more' }),
     ]
 
-    data.buttonAdd = button({ mode: 'light', title: 'Add an attachment' })
+    data.buttonAdd = button({ mode: 'light', title: 'Add an attachment', icon: 'plus' })
     data.newMessage = input({ placeholder: 'Сообщение' })
-    data.buttonSend = button({ title: 'send message' })
+    data.buttonSend = button({ title: 'send message', icon: 'send' })
 
     return tmpl(data);
 }

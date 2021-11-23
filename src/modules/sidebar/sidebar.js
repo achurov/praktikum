@@ -12,7 +12,7 @@ export default (data) => {
         data.chatList = data.chatList.map(item => card(item))
     }
 
-    data.button = button({ title: 'search' })
+    data.button = button({ title: 'search', icon: 'setting' })
     data.search = input({ className: 'sidebar__search', placeholder: 'Поиск' })
 
     return tmpl(data);

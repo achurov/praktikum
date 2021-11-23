@@ -48,7 +48,7 @@
     }
 
 
-    &:hover {
+    &:not(&_active):hover {
         background: #F4F4F5;
     }
 
