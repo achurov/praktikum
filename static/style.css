@@ -13,5 +13,8 @@ body {
 
 #main {
     background: #F7F9FA;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 100vh;
 }
+ 

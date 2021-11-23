@@ -1,7 +1,9 @@
 div.chat
-    div.header
-        div.header__title
-            !=person
+    div.chat__header
+        !=person
+        div.utils
+            each button in headerButtons
+                !=button
 
     div.chat__content
         each dateGroup in messages
@@ -14,10 +16,10 @@ div.chat
                         !=message
 
     div.new-message
-        button.new-message__add
+        !=buttonAdd
         div.new-message__text
-            input(type='text' name='new_message' placeholder='Сообщение' class='new-message__input') 
-        button.new-message__send
+            !=newMessage
+        !=buttonSend
 
 
 
