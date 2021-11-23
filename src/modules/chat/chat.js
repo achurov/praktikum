@@ -14,7 +14,5 @@ export default (data) => {
         })
     }
 
-console.log(data.messages)
-
     return tmpl(data);
 }
