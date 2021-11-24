@@ -4,10 +4,17 @@ import person from './components/person/person'
 import message from './components/message/message'
 import button from '../../components/button/button'
 import input from '../../modules/form/components/input/input'
+import header from './components/chatHeader/chatHeader'
 
 export default (data) => {
 
-    data.person = person(data.person)
+    data.header = header({
+        person: person(data.person),
+        buttons: [
+            button({ title: 'search in chat', className: 'utils__item', icon: 'search' }),
+            button({ title: 'more', className: 'utils__item', icon: 'more' }),
+        ]
+    })
 
     if (Array.isArray(data.messages)) {
         data.messages = data.messages.map(dateGroup => {
@@ -15,11 +22,6 @@ export default (data) => {
             return dateGroup
         })
     }
-
-    data.headerButtons = [
-        button({ title: 'search in chat', className: 'utils__item', icon: 'search' }),
-        button({ title: 'more', className: 'utils__item', icon: 'more' }),
-    ]
 
     data.buttonAdd = button({ mode: 'light', title: 'Add an attachment', icon: 'plus' })
     data.newMessage = input({ placeholder: 'Сообщение' })

@@ -1,9 +1,5 @@
 div.chat
-    div.chat__header
-        !=person
-        div.utils
-            each button in headerButtons
-                !=button
+    !=header
 
     div.chat__content
         each dateGroup in messages

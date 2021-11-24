@@ -6,31 +6,6 @@
     justify-content: space-between;
     height: 100vh;
 
-
-    &__header {
-        height: 60px;
-        background: #fff;
-        border-bottom: solid 1px #E8E8E8;
-        flex: 0 0 auto;
-        padding: 0 24px;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-
-        // &__title {
-        //     grid-column-start: 1;
-        //     grid-column-end: 3;
-        //     display: flex;
-        //     background: tomato;
-        //     align-items: center;
-
-
-        // }
-
-    }
-
     &__content {
         padding: 12px;
         overflow-y: scroll;

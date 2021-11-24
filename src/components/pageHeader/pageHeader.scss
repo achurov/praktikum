@@ -1,0 +1,30 @@
+.header {
+    height: 60px;
+    background: #fff;
+    border-bottom: solid 1px #E8E8E8;
+    // flex: 0 0 auto;
+    padding: 0 24px;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    // display: flex;
+    // justify-content: space-between;
+    align-items: center;
+
+    &__left{
+        // display: flex;
+        // justify-content: end;
+    }
+
+    &__title{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__right{
+        display: flex;
+        justify-content: end;
+    }
+}

@@ -2,7 +2,7 @@ import './button.scss';
 import tmpl from './button.pug';
 
 export default (data) => {
-
+ 
     if (data.icon) {
         switch (data.icon) {
             case 'search':

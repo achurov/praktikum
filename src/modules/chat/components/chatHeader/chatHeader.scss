@@ -1,0 +1,15 @@
+.chat-header {
+    height: 60px;
+    background: #fff;
+    border-bottom: solid 1px #E8E8E8;
+    flex: 0 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__utils{
+
+    }
+}

@@ -1,0 +1,16 @@
+div.setting
+    div.setting-group 
+        div.setting__line.setting__line_center 
+            !=avatar
+
+    each group in groups
+        div.setting-group   
+            each item in group
+                div.setting__line
+                    !=item
+
+    //- div.setting-group   
+    //-     div.setting__line
+    //-         a(href="").link Изменить пароль
+    //-     div.setting__line
+    //-         a(href="/chat").link.link_abort Выйти
