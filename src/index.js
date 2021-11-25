@@ -2,8 +2,8 @@ import signinPage from './pages/signin/signin'
 import signupPage from './pages/signup/signup'
 import chatPage from './pages/chat/chat'
 import settingPage from './pages/setting/setting'
-import error500Page from './pages/error500/error500' 
-import error400Page from './pages/error400/error400' 
+import error500Page from './pages/error500/error500'
+import error400Page from './pages/error400/error400'
 
 const app = document.querySelector("#app");
 const path = window.location.pathname;
