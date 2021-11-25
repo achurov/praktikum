@@ -21,7 +21,8 @@
     },
     "homepage": "https://github.com/achurov/praktikum#readme",
     "devDependencies": {
-        "parcel": "latest",
+        "@parcel/config-default": "^2.0.1",
+        "parcel": "^2.0.1",
         "parcel-transformer-pug-precompile": "^1.0.6"
     }
 }
