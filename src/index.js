@@ -25,8 +25,8 @@ switch (path) {
         app.innerHTML = settingPage();
         break;
     case '/500':
-        root.innerHTML = error500Page();
+        app.innerHTML = error500Page();
         break;
     default:
-        root.innerHTML = error400Page();
+        app.innerHTML = error400Page();
 }
