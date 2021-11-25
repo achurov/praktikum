@@ -1,6 +1,0 @@
-{
-  "transformers": {
-    "*.pug": ["parcel-transformer-pug-precompile"]
-  }
-
-}
