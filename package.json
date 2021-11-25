@@ -8,8 +8,7 @@
     "scripts": {
         "start": "parcel static/index.html -p 3000",
         "dev": "parcel static/index.html -p 3000 --open",
-        "build": "parcel build static/index.html",
-        "server": "node server.js"
+        "build": "parcel build static/index.html"
     },
     "repository": {
         "type": "git",
