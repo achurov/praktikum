@@ -3,8 +3,6 @@ import tmpl from './sidebar.pug';
 import card from '../chat/components/card/card'
 import input from '../form/components/input/input'
 import button from '../../components/button/button'
-import { Concat } from 'nunjucks/src/nodes';
-import { string } from 'nunjucks/src/filters';
 
 export default (data) => {
 
