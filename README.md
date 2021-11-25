@@ -12,7 +12,7 @@ https://www.figma.com/file/BRT0Knjd08ubRNz4EeztS1/Chat?node-id=0%3A1
 ## Установка
 
 - `npm install` — установка стабильной версии
-- `npm start` — запуск версии для разработчика
+- `npm dev` — запуск версии для разработчика
 - `npm build` — сборка стабильной версии
 
 ## Страницы
