@@ -1,0 +1,29 @@
+{
+    "name": "messager-yandex-practicum",
+    "version": "1.0.0",
+    "engines": {
+        "node": ">=12.0.0"
+    },
+    "scripts": {
+        "start": "parcel static/index.html -p 3000",
+        "dev": "parcel static/index.html -p 3000 --open",
+        "build": "parcel build static/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/achurov/praktikum.git"
+    },
+    "author": "achurov@gmail.com",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/achurov/praktikum/issues"
+    },
+    "homepage": "https://github.com/achurov/praktikum#readme",
+    "devDependencies": {
+        "@parcel/config-default": "^2.0.1",
+        "@parcel/transformer-sass": "^2.0.1",
+        "parcel": "^2.0.1",
+        "parcel-transformer-pug-precompile": "^1.0.6",
+        "typescript": "^4.5.2"
+    }
+}

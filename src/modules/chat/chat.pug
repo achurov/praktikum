@@ -1,0 +1,22 @@
+div.chat
+    !=header
+
+    div.chat__content
+        each dateGroup in messages
+            div.date-group
+                div.date-group__date 
+                    div.chat-date #{dateGroup.date}
+                    
+                div.date-group__content                
+                    each message in dateGroup.messages
+                        !=message
+
+    div.new-message
+        !=buttonAdd
+        div.new-message__text
+            !=newMessage
+        !=buttonSend
+
+
+
+
