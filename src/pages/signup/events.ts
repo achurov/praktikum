@@ -27,12 +27,19 @@ export default {
             }
         });
 
+        const formData = {};
+        (this.getElement() as HTMLFormElement).querySelectorAll('.form__input').forEach((element: HTMLInputElement) => {
+            formData[element.name] = element.value;
+        })
+
         if (error) {
-            console.log('submit not OK')
+            console.log('submit not OK');
         }
         else {
-            console.log('submit OK')
+            console.log('submit OK');
         }
+
+        console.log(formData);
 
     }
 

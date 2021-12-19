@@ -10,6 +10,7 @@ var Validator = /** @class */ (function () {
             rule = rule.toLocaleLowerCase();
             _this.required(rule, value);
             _this.email(rule, value);
+            _this.phone(rule, value);
             _this.min(rule, value);
         });
         return this.result;
@@ -31,6 +32,16 @@ var Validator = /** @class */ (function () {
             this.result.push({
                 result: false,
                 message: 'is not email'
+            });
+        }
+    };
+    Validator.phone = function (rule, value) {
+        if (rule !== 'phone')
+            return;
+        if (!value.match(/^(?:\+7|8)?9(?:\d{9})$/)) {
+            this.result.push({
+                result: false,
+                message: 'is not phone'
             });
         }
     };

@@ -13,6 +13,7 @@ export default class Validator {
 
             this.required(rule, value);
             this.email(rule, value as string);
+            this.phone(rule, value as string);
             this.min(rule, value as string);
 
         });
@@ -38,6 +39,17 @@ export default class Validator {
             this.result.push({
                 result: false,
                 message: 'is not email'
+            } as ValidateMassage);
+        }
+    }
+
+    private static phone(rule, value: string): void {
+        if (rule !== 'phone') return
+
+        if (!value.match(/^(?:\+7|8)?9(?:\d{9})$/)) {
+            this.result.push({
+                result: false,
+                message: 'is not phone'
             } as ValidateMassage);
         }
     }

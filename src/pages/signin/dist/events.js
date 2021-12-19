@@ -21,12 +21,17 @@ exports["default"] = {
                 error = validateResult.length || error;
             }
         });
+        var formData = {};
+        this.getElement().querySelectorAll('.form__input').forEach(function (element) {
+            formData[element.name] = element.value;
+        });
         if (error) {
             console.log('submit not OK');
         }
         else {
             console.log('submit OK');
         }
+        console.log(formData);
     }
 };
 var rules = {
