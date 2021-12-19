@@ -15,3 +15,12 @@
     font-size: 14px;
     height: 52px;
 }
+
+.form__input.error {
+    border-color: crimson;
+}
+
+.error-massege {
+    color: crimson;
+    font-size: 12px;
+}

@@ -1,5 +1,6 @@
 import EventBus from './eventBus';
 import { Props } from './types';
+import { ElementEvents } from './types';
 import { v4 as uuidv4 } from 'uuid';
 
 export default abstract class Block {
@@ -15,6 +16,7 @@ export default abstract class Block {
     protected tagName: string;
     protected element: HTMLElement;
     protected eventBus: EventBus;
+    protected events: ElementEvents;
     protected props: Props;
     protected children: Record<string, Block>;
 
@@ -24,15 +26,13 @@ export default abstract class Block {
 
         this.id = uuidv4();
         this.tagName = tagName;
-        const { children, props } = this.getChildren(propsAndChildren);
 
+        const { children, props, events } = this.getChildren(propsAndChildren);
         this.props = this.makePropsProxy(props);
         this.children = children;
+        this.events = events;
 
         this.eventBus.emit(Block.EVENTS.INIT);
-
-        // console.dir(this);
-
     }
 
     private registerEvents(): void {
@@ -46,26 +46,27 @@ export default abstract class Block {
     private getChildren(propsAndChildren) {
         const children = {};
         const props = {};
+        const events = {};
 
         Object.entries(propsAndChildren).forEach(([key, value]) => {
-            if (value instanceof Block || Array.isArray(value)) {
+            if (key === 'events') {
+                Object.entries(value as Object).forEach(([eventKey, eventValue]) => {
+                    events[eventKey] = eventValue;
+                })
+            } else if (value instanceof Block || Array.isArray(value)) {
                 children[key] = value;
             } else {
                 props[key] = value;
             }
         });
 
-        return { children, props };
-
+        return { children, props, events };
 
     }
-
-
 
     private makePropsProxy(props: Props) {
         return new Proxy(props, {
             get: (target: Props, prop: string): unknown => {
-
                 return target[prop];
             },
 
@@ -81,9 +82,7 @@ export default abstract class Block {
     }
 
     private init(): void {
-        // console.log(this, 'init');
         this.createElement();
-
         this.eventBus.emit(Block.EVENTS.FLOW_RENDER);
     }
 
@@ -107,13 +106,7 @@ export default abstract class Block {
     private componentRender(): void {
         const fragment = this.render();
         this.element = fragment.firstElementChild as HTMLElement;
-
-        //     this._removeEvents();
-        //     this._element.innerHTML = ''; // удаляем предыдущее содержимое
-
-        //   this._element.appendChild(block);
-
-        //   this._addEvents();
+        this.addEvents();
 
 
 
@@ -138,7 +131,7 @@ export default abstract class Block {
                 if (!propsAndStubs[key]) {
                     propsAndStubs[key] = [];
                 }
-                
+
                 child.forEach((innerChild: Block) => {
                     propsAndStubs[key].push(`<div data-id="${innerChild.id}"></div>`)
                 })
@@ -165,10 +158,14 @@ export default abstract class Block {
         return fragment.content;
     }
 
-    // protected abstract compile(): any;
-
     private createElement() {
         this.element = document.createElement(this.tagName);
+    }
+
+    private addEvents() {
+        Object.keys(this.events).forEach((eventName) => {
+            this.element.addEventListener(eventName, this.events[eventName].bind(this)); 
+        })
     }
 
     public getElement(): HTMLElement {

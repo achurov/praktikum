@@ -6,6 +6,7 @@ import Input from '../../modules/form/components/input';
 import Button from '../../modules/form/components/button';
 import FormText from '../../modules/form/components/text';
 import Link from '../../components/link';
+import Event from './events';
 
 export default class SingInPage extends Block {
 
@@ -21,12 +22,20 @@ export default class SingInPage extends Block {
                         name: 'login',
                         placeholder: 'Логин',
                         className: 'form__input',
-                    
+                        events: {
+                            blur: Event.inputBlur,
+                            focus: Event.inputFocus
+                        }
                     }),
                     new Input({
                         name: 'password',
-                        placeholder: 'Логин',
-                        className: 'form__input'
+                        type: 'password',
+                        placeholder: 'Пароль',
+                        className: 'form__input',
+                        events: {
+                            blur: Event.inputBlur,
+                            focus: Event.inputFocus
+                        }
                     }),
                     new Button({
                         text: 'Войти',
@@ -41,7 +50,10 @@ export default class SingInPage extends Block {
                         text: 'Регистрация',
                         className: 'form__link'
                     })
-                ]
+                ],
+                events: {
+                    submit: Event.submit
+                }
             })
         }
 
@@ -51,13 +63,13 @@ export default class SingInPage extends Block {
 
     }
 
-    // events() {
-    //     return {
-    //         loginChange: (e) => {
-    //             console.log(e)
-    //         }
-    //     }
-    // }
+    events() {
+        return {
+            loginChange: (e) => {
+                console.log(e)
+            }
+        }
+    }
 
     render() {
         return this.compile(template, this.props);

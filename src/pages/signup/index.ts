@@ -6,7 +6,7 @@ import Input from '../../modules/form/components/input';
 import Button from '../../modules/form/components/button';
 import FormText from '../../modules/form/components/text';
 import Link from '../../components/link';
-
+import Event from './events'
 export default class SingUpPage extends Block {
 
     constructor(props: Props = {}) {
@@ -20,39 +20,68 @@ export default class SingUpPage extends Block {
                     new Input({
                         name: 'first_name',
                         placeholder: 'Имя',
-                        className: 'form__input'
+                        className: 'form__input',
+                        events: {
+                            blur: Event.inputBlur,
+                            focus: Event.inputFocus
+                        }
                     }),
                     new Input({
                         name: 'second_name',
                         placeholder: 'Фамилия',
-                        className: 'form__input'
+                        className: 'form__input',
+                        events: {
+                            blur: Event.inputBlur,
+                            focus: Event.inputFocus
+                        }
                     }),
                     new Input({
                         name: 'login',
                         placeholder: 'Логин',
-                        className: 'form__input'
+                        className: 'form__input',
+                        events: {
+                            blur: Event.inputBlur,
+                            focus: Event.inputFocus
+                        }
                     }),
                     new Input({
                         type: 'email',
                         name: 'email',
                         placeholder: 'Почта',
-                        className: 'form__input'
+                        className: 'form__input',
+                        events: {
+                            blur: Event.inputBlur,
+                            focus: Event.inputFocus
+                        }
                     }),
                     new Input({
                         name: 'phone',
                         placeholder: 'Телефон',
-                        className: 'form__input'
+                        className: 'form__input',
+                        events: {
+                            blur: Event.inputBlur,
+                            focus: Event.inputFocus
+                        }
                     }),
                     new Input({
+                        type: 'password',
                         name: 'password',
                         placeholder: 'Пароль',
-                        className: 'form__input'
+                        className: 'form__input',
+                        events: {
+                            blur: Event.inputBlur,
+                            focus: Event.inputFocus
+                        }
                     }),
                     new Input({
                         type: 'password',
                         name: 're_password',
                         placeholder: 'Пароль еще раз',
-                        className: 'form__input'
+                        className: 'form__input',
+                        events: {
+                            blur: Event.inputBlur,
+                            focus: Event.inputFocus
+                        }
                     }),
                     new Button({
                         text: 'Зарегистрироваться',
@@ -66,7 +95,10 @@ export default class SingUpPage extends Block {
                         text: 'Войти',
                         className: 'form__link'
                     })
-                ]
+                ],
+                events: {
+                    submit: Event.submit
+                }
             })
         }
 
