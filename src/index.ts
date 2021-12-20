@@ -3,6 +3,8 @@ import SignInPage from './pages/signin';
 import SingUpPage from './pages/signup';
 import ChatPage from './pages/chat';
 import SettingPage from './pages/setting';
+import Error400Page from './pages/error400';
+import Error500Page from './pages/error500';
 
 // const app = document.querySelector("#app");
 const path = window.location.pathname;
@@ -23,11 +25,11 @@ switch (path) {
     case '/setting':
         renderDOM('#app', new SettingPage());
         break;
-    // case '/500':
-    //     app.innerHTML = error500Page();
-    //     break;
-    // default:
-    //     app.innerHTML = error400Page();
+    case '/500':
+        renderDOM('#app', new Error500Page());
+        break;
+    default:
+        renderDOM('#app', new Error400Page());
 }
 
 
