@@ -63,14 +63,6 @@ export default class SingInPage extends Block {
 
     }
 
-    events() {
-        return {
-            loginChange: (e) => {
-                console.log(e)
-            }
-        }
-    }
-
     render() {
         return this.compile(template, this.props);
     }
