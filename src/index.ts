@@ -6,7 +6,6 @@ import SettingPage from './pages/setting';
 import Error400Page from './pages/error400';
 import Error500Page from './pages/error500';
 
-// const app = document.querySelector("#app");
 const path = window.location.pathname;
 
 switch (path) {
