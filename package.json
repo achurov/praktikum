@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/achurov/praktikum#readme",
     "devDependencies": {
+        "@parcel/config-default": "^2.0.1",
         "@typescript-eslint/eslint-plugin": "^5.6.0",
         "@typescript-eslint/parser": "^5.6.0",
         "eslint": "^8.3.0",
