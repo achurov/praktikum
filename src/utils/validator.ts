@@ -15,7 +15,6 @@ export default class Validator {
             this.email(rule, value as string);
             this.phone(rule, value as string);
             this.min(rule, value as string);
-
         });
 
         return this.result;
@@ -56,7 +55,7 @@ export default class Validator {
 
     private static min(rule: string, value: string): void {
         if (rule.slice(0, 3) !== 'min') return
-        if (typeof value !== 'string') return
+        // if (typeof value !== 'string') return
 
         const minCount = Number(rule.split(':')[1]);
 

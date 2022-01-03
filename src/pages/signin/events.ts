@@ -15,7 +15,6 @@ export default {
     },
 
     submit: function (event: Event): void {
-
         event.preventDefault();
 
         let error = false;
@@ -85,7 +84,7 @@ function removeError(element: HTMLInputElement): void {
 
     if (this.id) {
         document.querySelectorAll(`[data-input-id="${this.id}"]`).forEach(errorElement => {
-            errorElement.remove()
+            errorElement.remove();
         })
     }
 }

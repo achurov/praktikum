@@ -16,9 +16,4 @@ export default class EventBus {
     emit(event: string, ...args: string[]): void {
         this.listeners[event].forEach(listener => listener(...args));
     }
-
-    //   // Можно называть detach, как больше нравится
-    //   off(event, callback) {
-    //     ...
-    //   }
 }

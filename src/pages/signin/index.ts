@@ -9,7 +9,6 @@ import Link from '../../components/link';
 import Event from './events';
 
 export default class SingInPage extends Block {
-
     constructor(props: Props = {}) {
 
         props = {
@@ -57,18 +56,7 @@ export default class SingInPage extends Block {
             })
         }
 
-
-
         super('div', props);
-
-    }
-
-    events() {
-        return {
-            loginChange: (e) => {
-                console.log(e)
-            }
-        }
     }
 
     render() {

@@ -48,8 +48,7 @@ var Validator = /** @class */ (function () {
     Validator.min = function (rule, value) {
         if (rule.slice(0, 3) !== 'min')
             return;
-        if (typeof value !== 'string')
-            return;
+        // if (typeof value !== 'string') return
         var minCount = Number(rule.split(':')[1]);
         if (value.length < minCount) {
             this.result.push({
