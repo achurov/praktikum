@@ -1,0 +1,23 @@
+
+.setting-group {
+    background: #fff;
+    margin-top: 24px;
+    border-radius: 10px;
+}
+
+
+.setting__line {
+    display: flex;
+    padding: 16px 24px;
+    justify-content: space-between;
+
+    &:not(:first-child) {
+        border-top: solid 1px #E8E8E8;
+    }
+
+
+    &_center {
+        justify-content: center;
+    }
+
+}

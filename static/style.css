@@ -18,6 +18,8 @@ body {
     grid-template-rows: 100vh;
 }
 
+ 
+
 .page-center {
     display: flex;
     align-items: center;

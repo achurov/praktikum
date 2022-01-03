@@ -1,0 +1,21 @@
+.date-group {
+
+    &__date {
+        margin: 24px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content {
+        margin-top: 12px;
+    }
+}
+
+.chat-date {
+    font-size: 12px;
+    background: #fff;
+    padding: 4px 12px;
+    border: 1px solid #E8E8E8;
+    border-radius: 1em;
+    color: #999;
+}
