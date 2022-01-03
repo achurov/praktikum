@@ -9,7 +9,6 @@ import Link from '../../components/link';
 import Event from './events';
 
 export default class SingInPage extends Block {
-
     constructor(props: Props = {}) {
 
         props = {
@@ -57,10 +56,11 @@ export default class SingInPage extends Block {
             })
         }
 
-
-
         super('div', props);
+<<<<<<< HEAD
 
+=======
+>>>>>>> sprint_2
     }
 
     render() {

@@ -73,13 +73,6 @@ var SingInPage = /** @class */ (function (_super) {
         _this = _super.call(this, 'div', props) || this;
         return _this;
     }
-    SingInPage.prototype.events = function () {
-        return {
-            loginChange: function (e) {
-                console.log(e);
-            }
-        };
-    };
     SingInPage.prototype.render = function () {
         return this.compile(template_pug_1["default"], this.props);
     };
