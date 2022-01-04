@@ -57,10 +57,6 @@ export default class SingInPage extends Block {
         }
 
         super('div', props);
-<<<<<<< HEAD
-
-=======
->>>>>>> sprint_2
     }
 
     render() {
