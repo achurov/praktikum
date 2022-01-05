@@ -2,7 +2,7 @@ import EventBus from './eventBus';
 import { Props } from './types';
 import { ElementEvents } from './types';
 import { v4 as uuidv4 } from 'uuid';
-
+import renderDOM from './renderDOM';
 export default abstract class Block {
     static EVENTS = {
         INIT: "init",
@@ -87,7 +87,6 @@ export default abstract class Block {
     }
 
     private componentDidMount(): void {
-        // console.log(this, 'componentDidMount')
     }
 
     private componentDidUpdate(oldProp, prop): void {
@@ -95,29 +94,17 @@ export default abstract class Block {
             return;
         }
 
-        // console.log(this, 'componentDidUpdate')
         this.eventBus.emit(Block.EVENTS.FLOW_RENDER);
     }
 
     private componentWillUnmount(): void {
-        // console.log(this, 'componentWillUnmount')
     }
 
     private componentRender(): void {
         const fragment = this.render();
         this.element = fragment.firstElementChild as HTMLElement;
         this.addEvents();
-
-
-
-
-
-
-        // this.element.innerHTML = this.render();
-        // console.log(this.element.innerHTML);
-
         this.eventBus.emit(Block.EVENTS.FLOW_CDM);
-
     }
 
     protected abstract render(): DocumentFragment;
@@ -170,5 +157,13 @@ export default abstract class Block {
 
     public getElement(): HTMLElement {
         return this.element;
+    }
+
+    public show(rootQuery){
+        renderDOM(rootQuery, this);
+    }
+    
+    public hide(){
+        this.getElement().remove();
     }
 }
