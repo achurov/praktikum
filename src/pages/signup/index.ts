@@ -91,7 +91,7 @@ export default class SingUpPage extends Block {
                         text: 'Уже есть аккаунт?',
                     }),
                     new Link({
-                        href: '/signin',
+                        href: '/',
                         text: 'Войти',
                         className: 'form__link'
                     })
