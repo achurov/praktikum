@@ -1,7 +1,6 @@
 import EventBus from './eventBus';
 import { Props } from './types';
 import { ElementEvents } from './types';
-// import { v4 as uuidv4 } from 'uuid';
 import uuidv4 from './uuid';
 import renderDOM from './renderDOM';
 export default abstract class Block {
