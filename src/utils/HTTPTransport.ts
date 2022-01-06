@@ -1,4 +1,4 @@
-// import { Options } from '../types';
+import { Options } from './types';
 
 enum METHODS {
     GET = 'GET',
@@ -43,7 +43,7 @@ class HTTPTransport {
 
 
     private request = (url: string, options: Options, timeout = 5000) => {
-        const { headers = {}, method, data } = options;
+        const { headers = {}, method, query, body } = options;
 
         return new Promise((resolve, reject) => {
             const xhr = new XMLHttpRequest();
@@ -51,8 +51,8 @@ class HTTPTransport {
 
             xhr.open(
                 method,
-                isGet && data
-                    ? `${url}${this.queryStringify(data)}`
+                isGet && query
+                    ? `${url}${this.queryStringify(query)}`
                     : url,
             );
 
@@ -67,10 +67,10 @@ class HTTPTransport {
             xhr.onerror = reject;
             xhr.ontimeout = reject;
 
-            if (isGet || !data) {
+            if (isGet || !body) {
                 xhr.send();
             } else {
-                xhr.send(JSON.stringify(data));
+                xhr.send(JSON.stringify(body));
             }
         });
     };

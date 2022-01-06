@@ -2,6 +2,7 @@ import Validator from '../../utils/validator'
 import { ValidateResult } from '../../utils/types'
 import { ValidateMassage } from '../../utils/types'
 import Input from '../../modules/form/components/input';
+import AuthController from '../../controllers/auth-controller'
 
 export default {
     inputFocus: function (event: Event): void {
@@ -37,15 +38,19 @@ export default {
         }
         else {
             console.log('submit OK');
+            AuthController.signin({
+                'login': formData.login,
+                'password': formData.password
+            });
         }
 
-        console.log(formData);
+        // console.log(formData);
     }
 
 }
 
 const rules = {
-    'login': 'required|email',
+    'login': 'required',
     'password': 'min:3'
 }
 

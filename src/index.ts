@@ -1,4 +1,3 @@
-import renderDOM from './utils/renderDOM';
 import SignInPage from './pages/signin';
 import SingUpPage from './pages/signup';
 import ChatPage from './pages/chat';
