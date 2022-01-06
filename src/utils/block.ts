@@ -160,7 +160,7 @@ export default abstract class Block {
     }
 
     public show(rootQuery){
-        renderDOM(rootQuery, this);
+        renderDOM(this);
     }
     
     public hide(){
