@@ -3,7 +3,7 @@ import { Props } from '../../utils/types'
 import template from './template.pug';
 import './style.scss';
 import svg from '../../../static/images/svg';
-
+import Event from './events'
 
 export default class Button extends Block {
 
@@ -36,11 +36,16 @@ export default class Button extends Block {
                     break;
             }
 
-            super('button', props);
 
         }
+
+        props.events = {
+            click: Event.click
+        }
+
+        super('button', props);
     }
-    
+
     render() {
 
         return this.compile(template, this.props);

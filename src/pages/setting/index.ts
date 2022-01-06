@@ -18,6 +18,7 @@ export default class SettingPage extends Block {
             title: 'Настройки',
             left: new Button({
                 icon: 'setting',
+                href: '/messenger',
                 active: true
             })
         });

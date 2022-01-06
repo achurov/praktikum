@@ -14,7 +14,7 @@ export default class SingInPage extends Block {
         props = {
             title: 'LOGIN',
             form: new form({
-                action: '/chat',
+                action: '/messenger',
                 title: 'Вход',
                 elements: [
                     new Input({
@@ -45,7 +45,7 @@ export default class SingInPage extends Block {
                     }),
                     new Link({
                         elementType: 'link',
-                        href: '/signup',
+                        href: '/sign-up',
                         text: 'Регистрация',
                         className: 'form__link'
                     })
